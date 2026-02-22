@@ -29,6 +29,21 @@ This is a standalone Model Context Protocol (MCP) server that exposes scheduling
    cp .env.example .env
    ```
 
+### Obtaining Credentials
+
+- **Google Calendar**: 
+  1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+  2. Create a project and enable the **Google Calendar API**.
+  3. Create an **OAuth 2.0 Client ID**.
+  4. Use the [OAuth2 Playground](https://developers.google.com/oauthplayground) to get your `REFRESH_TOKEN`.
+- **Cal.com**:
+  1. Go to [Cal.com Settings > API Keys](https://cal.com/settings/developer/api-keys).
+  2. Create a new API key.
+  3. Find your event type ID in your [Event Types](https://cal.com/event-types) list.
+- **Email (SMTP)**:
+  1. If using Gmail, create an [App Password](https://myaccount.google.com/apppasswords).
+  2. Use your full email as `SMTP_USER`.
+
 4. **Start the Server**:
    ```bash
    npm start
